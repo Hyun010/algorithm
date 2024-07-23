@@ -4,7 +4,7 @@ def solution(prices):
     s=[0] #스택 초기화
     for i in range(1,l): #시간경과
         while s and prices[s[-1]]>prices[i]: #스택이 존재하며 현재값과 미래값 비교해서 크면
-            j=s.pop() #스택 팝해서 시간 불러오기
-            answer[j]=i-j #현재시간에 시간
-        s.append(i)
+            j=s.pop() #떨어진 시간
+            answer[j]=i-j #현재시간에 시간-떨어진시간->유지시간
+        s.append(i)#다음시간 추가
     return answer
