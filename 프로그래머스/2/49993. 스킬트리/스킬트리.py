@@ -1,6 +1,6 @@
 def solution(skill, skill_trees):
     answer=0 #스킬트리 개수
-    s=[] #
+    s=[] #선행스킬 스택
     for k in skill_trees: #스킬트리중 선행스킬 있는지 파악
         str1='' #선행스킬트리 묶는 문자열
         for i in k: #한글자씩 파악
